@@ -1,7 +1,9 @@
+.ClickableContainer{
+  align-self: center;
+}
 
 .Bubble {
   background: linear-gradient(to bottom, #ff6666 0%, #ff99cc 100%);
-  align-self: center;
   width: 8vw;
   height: 8vw;
 

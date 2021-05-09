@@ -1,3 +1,10 @@
+@import "compass/css3";
+
+//vars
+$fg:#e91e63;
+$bg:#8bc34a;
+$pi:3.14;
+
 %goo{
   filter:url('#goo');
   // debug 
@@ -38,6 +45,7 @@
   margin-top:-$height/2;
   transition:transform 200ms;
 }
+
 $hamburger-spacing:8px;
 .hamburger-1{
   transform:translate3d(0,-$hamburger-spacing,0);
