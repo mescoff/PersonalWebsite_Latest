@@ -1,6 +1,8 @@
+
 .App {
   text-align: center;
   background-color: #282c34;
+  color: white;
 }
 
 .App-logo {
@@ -14,14 +16,21 @@
   }
 }
 
+.Main-View {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .Welcome-Msg-Container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: white;
-  font-size: calc(8px + 2vmin);
+  font-size: calc(2px + 4vmin);
+  letter-spacing: .1rem;
 }
 
 .Welcome-Msg {

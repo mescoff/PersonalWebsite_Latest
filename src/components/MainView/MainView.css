@@ -1,0 +1,98 @@
+.Global-Container {
+  width: 80vw;
+  height: 80vh;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* min-height: 100vh; */
+  /* border-radius: 30%; */
+}
+
+.Bubble-Container {
+  /* background-color: white; */
+  width: 70vw;
+  height: 70vh;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* min-height: 100vh; */
+  /* border-radius: 30%; */
+}
+
+.Bubble {
+  background: linear-gradient(to bottom, #ff6666 0%, #ff99cc 100%);
+  align-self: center;
+  width: 10vw;
+  height: 10vw;
+
+  /* round the corners */
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+
+  /* glow effect */
+  /* -webkit-box-shadow: 0em 0em 0.5em #ffdf00; */
+  -webkit-box-shadow: 0em 0em 0.5em white;
+  -moz-box-shadow: 0em 0em 0.5em white;
+  box-shadow: 0em 0em 0.5em white;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .Bubble {
+    animation: moveBubbleAround infinite 8s linear;
+    animation-timing-function: ease-in-out;
+  }
+ }
+
+@keyframes Bubble-random-movements {
+  from {
+    transform: translateY(0px)
+  }
+
+  to {
+    transform: translateY(-2000px)
+  }
+}
+
+
+ /* Moving effect help:
+ - MyFiddle used for testing: https://jsfiddle.net/da9xpnfy/47/
+ - https://www.kirupa.com/snippets/getting_jittery_on_hover_using_only_css.htm */
+@keyframes moveBubbleAround {
+  10% {   transform: translate(-2px, -3px);}
+  20% {   transform: translate(3px, 5px) ;}
+  30% {   transform: translate(-4px, -5px) ;}
+  40% {   transform: translate(3px, 0px);}
+  50% {   transform: translate(-1px, -2px);}
+  60% {   transform: translate(0px, 3px);}
+  70% {   transform: translate(-2px, -4px) ;}
+  80% {   transform: translate(3px, 5px);}
+  90% {   transform: translate(-5px, -3px) ;}
+  100% {  transform: translate(0px, 0px) ;}
+}
+
+/* 
+Extra values tried
+
+0% { -webkit-transform:   translate(5%,2%); }
+20% { -webkit-transform:   translate(5%, 10%); }
+40% { -webkit-transform:  translate(15%, 20%); }
+60% { -webkit-transform:  translate(5%, 10%); }
+80% { -webkit-transform:  translate(5%,2%); }
+90% { -webkit-transform:  translate(15%, 20%); }
+100%{ -webkit-transform:  translate(5%,2%); }
+
+
+0% { -webkit-transform:   translate(5%,2%); }
+10% { -webkit-transform:   translate(5%, 10%); }
+20% { -webkit-transform:  translate(3%, 8%); }
+30% { -webkit-transform:  translate(5%, 10%); }
+40% { -webkit-transform:  translate(5%,2%);
+50% { -webkit-transform:   translate(5%, 10%); }
+60% { -webkit-transform:  translate(3%, 8%); }
+70% { -webkit-transform:  translate(5%, 10%); }
+80% { -webkit-transform:  translate(5%,2%);
+90% { -webkit-transform:   translate(5%, 10%); }
+100% { -webkit-transform:  translate(3%, 8%); } */

@@ -1,8 +1,8 @@
-import { Fade, Typography } from '@material-ui/core';
+import { Fade } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
-import { logInfo } from './utils/logging';
+import { logInfo } from '../../utils/logging';
 
-export const WelcomeMessage: React.FC<{ text: string, masterTimeOut: number }> = (props) => {
+const WelcomeMessage: React.FC<{ text: string, masterTimeOut: number }> = (props) => {
   const logger = "WelcomeMessage";
   const fadingTime = props.masterTimeOut / 3;
   const showingTime = props.masterTimeOut / 2;
@@ -23,11 +23,11 @@ export const WelcomeMessage: React.FC<{ text: string, masterTimeOut: number }> =
 
   return (
     <Fade in={msgFadeIn} timeout={fadingTime}>
-      <Typography variant="h2" className="Welcome-Msg">
+      <h2 className="Welcome-Msg">
         {props.text}
-      </Typography>
-
+      </h2>
     </Fade>
   )
 }
 
+export default WelcomeMessage;

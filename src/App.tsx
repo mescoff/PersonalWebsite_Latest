@@ -1,13 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import '@fontsource/roboto';
-import { WelcomePageLoader } from './WelcomePageLoader';
+import { MainPageLoader } from './components/MainView/WelcomePageLoader';
 
 function App(): JSX.Element {
   return (
     <div className="App">
-      <header>
+      {/* <header> */}
         {/* <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
@@ -20,8 +19,8 @@ function App(): JSX.Element {
         >
           Learn React
         </a> */}  
-        <WelcomePageLoader/>
-      </header>
+        <MainPageLoader/>
+      {/* </header> */}
     </div>
   );
 }
