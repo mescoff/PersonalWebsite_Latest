@@ -1,5 +1,6 @@
 import { Fade } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
+import Bubbles from '../Bubbles/Bubbles';
 import AnimatedTitle from '../Title/AnimatedTitle';
 import './MainView.css';
 
@@ -19,8 +20,8 @@ const MainView: React.FC = () => {
       <AnimatedTitle />
       {/* <h2>Welcome !</h2> */}
       <Fade in={fadeIn} timeout={2000}>
-        <div className="Bubble-Container">
-          <div className="Bubble" />
+        <div className="Bubbles-Container">
+          <Bubbles />
         </div>
       </Fade>
 
