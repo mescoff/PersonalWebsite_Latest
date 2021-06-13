@@ -1,4 +1,6 @@
-/* .gradient-box {
+
+ /* https://css-tricks.com/gradient-borders-in-css/ */
+ .gradient-box {
   
   display: flex;
   align-items: center;
@@ -27,4 +29,4 @@
     border-radius: inherit; /* !importanté */
     background: linear-gradient(to right, red, orange);
   }
-} */
+} 

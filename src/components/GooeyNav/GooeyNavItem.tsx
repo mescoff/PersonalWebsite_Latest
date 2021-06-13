@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as menuItemStyle from "./styles/menuItem";
 export type Props<A> = {
-  orientation: menuItemStyle.Orientation;
+  // orientation: menuItemStyle.Orientation;
   revealed: boolean;
   position: number;
   title: string;
@@ -12,26 +12,39 @@ export type Props<A> = {
 };
 type State = { hovered: boolean };
 
- 
-// const GooeyNavItem2 : React.FC<Props<A>> = (props) => {
+// https://stackoverflow.com/a/51463284/2399897
+// export const GooeyNavItem2 : <A extends any>(p: Props<A>) => React.FC<Props<any>> = (props) => {
 //   const [hovered, setHovered] = React.useState<boolean>();
 
+//   // const index = props.position;
+//   // const style = props.style;
+//   const {
+//     children,
+//     component = "a",
+//     // componentProps: { style, ...compProps } = {} as { style?: React.CSSProperties },
+//     // orientation,
+//     position: index,
+//     revealed,
+//     // title
+//   } = props;
+
 //   return(
-//     <React.Component
-//       href="#"
-//       title={props.title}
+//     <var
+//       // href="#"
+      
+//       // title={props.title}
 //       onMouseEnter={() => setHovered(true)}
 //       onMouseLeave={() => setHovered(false)}
 //       style={{
-//         ...menuItemStyle.std({ index, props.orientation }),
+//         ...menuItemStyle.std({ index }),
 //         ...(hovered && menuItemStyle.hover),
-//         ...(props.revealed && menuItemStyle.revealed({ index, orientation })),
-//         ...props.style
+//         ...(revealed && menuItemStyle.revealed({ index })),
+//         // ...style
 //     }}
 //     {...props}
 //   >
-//     {props.children}
-//   </React.Component>
+//     {children}
+//   </var>
 //   )
 
 // }
@@ -44,8 +57,8 @@ export default class GooeyNavItem<A> extends React.Component<Props<any>, State> 
       children,
       component: Component = "a",
       componentProps: { style, ...compProps } = {} as { style?: React.CSSProperties },
-      orientation,
-      position: index,
+      // orientation,
+      position,
       revealed,
       title
     } = this.props;
@@ -56,9 +69,9 @@ export default class GooeyNavItem<A> extends React.Component<Props<any>, State> 
         onMouseEnter={() => this.setState({ hovered: true })}
         onMouseLeave={() => this.setState({ hovered: false })}
         style={{
-          ...menuItemStyle.std({ index, orientation }),
+          ...menuItemStyle.std({  index:position }),
           ...(this.state.hovered && menuItemStyle.hover),
-          ...(revealed && menuItemStyle.revealed({ index, orientation })),
+          ...(revealed && menuItemStyle.revealed({ index:position })),
           ...style
         }}
         {...compProps}

@@ -9,7 +9,7 @@ const styles = {
 }
 
 
-// TODO: gradient borders: https://css-tricks.com/gradient-borders-in-css/
+// TODO: gradient borders: https://css-tricks.com/gradient-borders-in-css/ in InfoBubble.css
 
 const InfoBubble: React.FC = () => {
 

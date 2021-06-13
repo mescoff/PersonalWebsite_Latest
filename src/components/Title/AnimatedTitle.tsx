@@ -29,9 +29,9 @@ const AnimatedTitle: React.FC = () => {
     // Using setInterval to properly loop through intro messages. Once we've shown them all, we show our main view
     let interval = setInterval(() => {
       if (i < toCharArray.length) {
-        logInfo(logger, `Displaying ${toCharArray[i]} at Index ${i}`)
+        // logInfo(logger, `Displaying ${toCharArray[i]} at Index ${i}`)
         completedTitle += toCharArray[i] // copying to new string
-        logInfo(logger, `Title is now ${title}`);
+        // logInfo(logger, `Title is now ${completedTitle}`);
         setTitle(completedTitle);
       }
       // else if (i === messagesToDisplay.length) {
